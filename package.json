@@ -1,0 +1,11 @@
+{
+  "name": "react-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vijayst/react-store.git",
+  "author": "vijayst <vijayst@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^16.7.0-alpha.2"
+  }
+}
