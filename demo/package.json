@@ -1,0 +1,11 @@
+{
+  "name": "react-reducer-store-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-reducer-store": "^1.0.0"
+  }
+}
