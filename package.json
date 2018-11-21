@@ -1,16 +1,18 @@
 {
   "name": "react-reducer-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "repository": "git@github.com:vijayst/react-store.git",
   "author": "vijayst <vijayst@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "parcel-bundler": "^1.10.3",
+  "dependencies": {
     "react": "^16.7.0-alpha.2"
   },
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3"
+  },
   "scripts": {
-    "build": "parcel build src/index.js"
+    "build": "parcel build --target node src/index.js"
   },
   "files": [
     "dist"
