@@ -1,27 +1,26 @@
 {
   "name": "react-reducer-store",
-  "version": "1.0.1",
-  "main": "lib/index.js",
+  "version": "1.0.2",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "repository": "git@github.com:vijayst/react-store.git",
   "author": "vijayst <vijayst@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "react": "^16.7.0-alpha.2"
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.7.0-alpha.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
   },
   "scripts": {
-    "build:lib": "babel src -d lib",
-    "build:dist": "rollup --config"
+    "build": "rollup --config"
   },
   "files": [
-    "dist",
-    "lib"
+    "dist"
   ]
 }
