@@ -1,20 +1,27 @@
 {
   "name": "react-reducer-store",
   "version": "1.0.1",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "dist/index.esm.js",
   "repository": "git@github.com:vijayst/react-store.git",
   "author": "vijayst <vijayst@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "react": "^16.7.0-alpha.2"
   },
-  "devDependencies": {
-    "parcel-bundler": "^1.10.3"
-  },
   "scripts": {
-    "build": "parcel build --target node src/index.js"
+    "build:lib": "babel src -d lib",
+    "build:dist": "rollup --config"
   },
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ]
 }
