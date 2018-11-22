@@ -1,6 +1,6 @@
 {
   "name": "react-reducer-store",
-  "version": "1.1.2",
+  "version": "1.1.5",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "repository": "git@github.com:vijayst/react-store.git",
@@ -22,5 +22,10 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "redux",
+    "flux"
   ]
 }

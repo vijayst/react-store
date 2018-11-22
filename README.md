@@ -64,4 +64,11 @@ export default function List() {
 }
 ```
 
-I will continue to actively work on this repo as time permits. At the end, I want to have something of an opinionated store for React apps similar to Redux, React Redux, Redux Logger, Redux Thunk all combined into one package.
+### Logging
+To add logging to the console, set the log prop on the Store to true.
+```
+<Store rootReducer={rootReducer} log={true}>
+  ...
+</Store>
+```
+
