@@ -13,7 +13,7 @@ export default function List() {
 
     return (
         <div className="list">
-            {state.map(item => (
+            {state.todo.map(item => (
                 <ListItem key={item.id} 
                     onDelete={handleDelete.bind(null, item.id)} 
                     text={item.text} 
