@@ -71,5 +71,7 @@ To add logging to the console, set the log prop on the Store to true.
   ...
 </Store>
 ```
+
 Output looks like below:
+
 ![Log Output](https://github.com/vijayst/react-store/blob/master/log.png?raw=true)
