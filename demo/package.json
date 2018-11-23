@@ -6,6 +6,6 @@
   "dependencies": {
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
-    "react-reducer-store": "^2.1.5"
+    "react-reducer-store": "^2.1.6"
   }
 }

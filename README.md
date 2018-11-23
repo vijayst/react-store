@@ -44,7 +44,7 @@ Use the useDispatch hook to get the dispatch function to root reducer.
 import { useDispatch } from 'react-reducer-store';
 
 export default function Form(props) {
-    const dispatch = useDispatch
+    const dispatch = useDispatch()
 
     function handleRandom() {
         dispatch({ type: 'DO_RANDOM' });
@@ -52,12 +52,12 @@ export default function Form(props) {
 ```
 
 ### Use useStore hook
-Use the store from the List component. Using the useStore hook will cause too many renders. So, recommend to use the connect higher order component shown below.
+Use the store from the List component using useStore hook
 ```
 import { useStore, useDispatch } from 'react-reducer-store';
 
 export default function List() {
-    const state = useStore();
+    const todo = useStore(state => state.todo, []);
     const dispatch = useDispatch();
 
     function handleDelete(id) {
@@ -69,7 +69,7 @@ export default function List() {
 
     return (
         <div className="list">
-            {state.todo.map(item => (
+            {todo.map(item => (
                 <ListItem key={item.id} 
                     onDelete={handleDelete.bind(null, item.id)} 
                     text={item.text} 
@@ -80,20 +80,6 @@ export default function List() {
 }
 ```
 
-### Use connect HOC
-connect function takes in mapStateToProps and component and returns a new component. The new component computes the requisite state from the global context. The state is attached to the props of the component. If there is no change in the props, then the wrapped component does not render.
-```
-import { connect } from 'react-reducer-store';
-
-function mapStateToProps(state) {
-    return {
-        todo: state.todo
-    };
-}
-
-export default connect(mapStateToProps, List);
-
-```
 
 ### Logging
 To add logging to the console, set the log prop on the Store to true.
