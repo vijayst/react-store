@@ -6,7 +6,7 @@ import Container from './Container';
 
 export default function App() {
     return (
-        <Store rootReducer={rootReducer} log={false}>
+        <Store rootReducer={rootReducer} log={true}>
            <Container />
         </Store>
     );

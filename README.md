@@ -14,9 +14,11 @@ Write as many reducers as you want in your React app. Combine all the reducers t
 ```
 import { combineReducers } from 'react-reducer-store';
 import todoReducer from './todoReducer';
+import randomReducer from './randomReducer';
 
 export default combineReducers({
-    todo: todoReducer
+    todo: todoReducer,
+    random: randomReducer
 });
 ```
 
@@ -36,13 +38,27 @@ export default function App() {
 }
 ```
 
-### Use useStore hook
-Use the store from the List component.
+### Use useDispatch hook
+Use the useDispatch hook to get the dispatch function to root reducer.
 ```
-import { useStore } from 'react-reducer-store';
+import { useDispatch } from 'react-reducer-store';
+
+export default function Form(props) {
+    const dispatch = useDispatch
+
+    function handleRandom() {
+        dispatch({ type: 'DO_RANDOM' });
+    }
+```
+
+### Use useStore hook
+Use the store from the List component. Using the useStore hook will cause too many renders. So, recommend to use the connect higher order component shown below.
+```
+import { useStore, useDispatch } from 'react-reducer-store';
 
 export default function List() {
-    const [state, dispatch] = useStore();
+    const state = useStore();
+    const dispatch = useDispatch();
 
     function handleDelete(id) {
         dispatch({
@@ -62,6 +78,21 @@ export default function List() {
         </div>
     );
 }
+```
+
+### Use connect HOC
+connect function takes in mapStateToProps and component and returns a new component. The new component computes the requisite state from the global context. The state is attached to the props of the component. If there is no change in the props, then the wrapped component does not render.
+```
+import { connect } from 'react-reducer-store';
+
+function mapStateToProps(state) {
+    return {
+        todo: state.todo
+    };
+}
+
+export default connect(mapStateToProps, List);
+
 ```
 
 ### Logging

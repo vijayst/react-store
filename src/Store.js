@@ -17,12 +17,8 @@ export default function Store(props) {
         }
     }, [state]);
 
-    if (props.log) {
-        dispatch = logAndDispatch
-    }
-
     return (
-        <DispatchContext.Provider value={dispatch}>
+        <DispatchContext.Provider value={props.log ? logAndDispatch : dispatch}>
             <StoreContext.Provider value={state}>
                 {props.children}
             </StoreContext.Provider>
