@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { connect, useDispatch } from 'react-reducer-store';
+import { useDispatch, useStore } from 'react-reducer-store';
 
-
-function List(props) {
+export default function List() {
     const dispatch = useDispatch();
+    const todo = useStore(state => state.todo, []);
 
     function handleDelete(id) {
         dispatch({
@@ -16,7 +16,7 @@ function List(props) {
 
     return (
         <div className="list">
-            {props.todo.map(item => (
+            {todo.map(item => (
                 <ListItem key={item.id} 
                     onDelete={handleDelete.bind(null, item.id)} 
                     text={item.text} 
@@ -53,11 +53,3 @@ function ListItem(props) {
         </div>
     );
 }
-
-function mapStateToProps(state) {
-    return {
-        todo: state.todo
-    };
-}
-
-export default connect(mapStateToProps, List);

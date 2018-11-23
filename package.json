@@ -1,6 +1,6 @@
 {
   "name": "react-reducer-store",
-  "version": "2.0.5",
+  "version": "2.1.5",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "repository": "git@github.com:vijayst/react-store.git",

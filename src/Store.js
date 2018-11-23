@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from 'react';
-import StoreContext from './StoreContext';
+import { publish } from './storeHelpers';
 import DispatchContext from './DispatchContext';
 
 let globalDispatch;
@@ -17,15 +17,14 @@ export default function Store(props) {
         if (props.log) {
             console.log('State: ', state);
         }
+        publish(state);
     }, [state]);
 
     globalDispatch = dispatch;
     
     return (
         <DispatchContext.Provider value={props.log ? logAndDispatch : dispatch}>
-            <StoreContext.Provider value={state}>
-                {props.children}
-            </StoreContext.Provider>
+            {props.children}
         </DispatchContext.Provider>
     );
 }

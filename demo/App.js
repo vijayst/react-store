@@ -1,6 +1,6 @@
 import React from 'react';
 import './app.css';
-import { Store } from 'react-reducer-store';
+import { Store }  from 'react-reducer-store';
 import rootReducer from './rootReducer';
 import Container from './Container';
 
