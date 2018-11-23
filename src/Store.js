@@ -2,16 +2,14 @@ import React, { useReducer, useEffect } from 'react';
 import StoreContext from './StoreContext';
 import DispatchContext from './DispatchContext';
 
-function wrapDispatch(dispatch) {
-    return function(action) {
-        console.log('Action: ', action);
-        return dispatch(action);
-    };
-}
-
 export default function Store(props) {
     const initialState = props.rootReducer(props.initialValue || {}, { type: '__INIT__' });
     let [state, dispatch] = useReducer(props.rootReducer, initialState);
+
+    function logAndDispatch(action) {
+        console.log('Action: ', action);
+        return dispatch(action);
+    }
 
     useEffect(() => {
         if (props.log) {
@@ -20,7 +18,7 @@ export default function Store(props) {
     }, [state]);
 
     if (props.log) {
-        dispatch = wrapDispatch(dispatch);
+        dispatch = logAndDispatch
     }
 
     return (

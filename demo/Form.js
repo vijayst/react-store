@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useStore } from 'react-reducer-store';
+import { useDispatch } from 'react-reducer-store';
 
 export default function Form(props) {
     const [value, setValue] = useState('');
-    const [state, dispatch] = useStore();
+    const dispatch = useDispatch();
 
     function handleAdd(e) {
         e.preventDefault();
@@ -13,9 +13,18 @@ export default function Form(props) {
         });
     }
 
+    function handleRandom(e) {
+        e.preventDefault();
+        dispatch({
+            type: 'DO_RANDOM'
+        });
+    }
+
     function handleChange(e) {
         setValue(e.target.value);
     }
+
+    console.log('Form component is rendering');
 
     return (
         <form>
@@ -26,6 +35,7 @@ export default function Form(props) {
                 onChange={handleChange}
             />
             <button onClick={handleAdd}>Add</button>
+            <button onClick={handleRandom}>Random</button>
         </form>
     );
 }

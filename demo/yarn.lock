@@ -37,10 +37,10 @@ react-dom@^16.7.0-alpha.2:
     prop-types "^15.6.2"
     scheduler "^0.12.0-alpha.2"
 
-react-reducer-store@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/react-reducer-store/-/react-reducer-store-1.1.5.tgz#ba667b3a967bd27871ef440a5c68182ef4264561"
-  integrity sha512-oFo0urmb0/K0Nlzged9IdEt6KVe4M1i5Tl/q9JGCZsMPou3J6gZ01AAVh2qcMrgN0Lfi16jOYX51tmJtqoNiIg==
+react-reducer-store@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-reducer-store/-/react-reducer-store-2.0.3.tgz#e5fbfad3d9b5b76081787857aa27933c65a0d910"
+  integrity sha512-aaNl/6ydINqBS7zVpGrna7hZAuUUhqxv6aiTClWEFFEjVSS89LoPnEaDSccWY9o4pKqpI3C3DcqXKxOMdqU61A==
 
 react@^16.7.0-alpha.2:
   version "16.7.0-alpha.2"
