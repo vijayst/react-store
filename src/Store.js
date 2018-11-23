@@ -1,5 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
 import StoreContext from './StoreContext';
+import DispatchContext from './DispatchContext';
 
 function wrapDispatch(dispatch) {
     return function(action) {
@@ -23,8 +24,10 @@ export default function Store(props) {
     }
 
     return (
-        <StoreContext.Provider value={[state, dispatch]}>
-            {props.children}
-        </StoreContext.Provider>
+        <DispatchContext.Provider value={dispatch}>
+            <StoreContext.Provider value={state}>
+                {props.children}
+            </StoreContext.Provider>
+        </DispatchContext.Provider>
     )
 }
