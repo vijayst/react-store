@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.app {
+    width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    border: 1px solid rgba(0,0,0,.05);
+    padding: 20px;
+}
+
+.list {
+    background-color: lightgoldenrodyellow;
+}
+
+.list__item {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    padding: 10px;
+    font-style: italic;
+}
+
+.list__item input[type=checkbox] {
+    margin-right: 20px;
+}
+
+input[type=text] {
+    padding: 8px 5px;
+    outline: none;
+    width: 280px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0,.24);
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: rgba(0,0,0,.4);
+}
+
+button:active {
+    background-color: rgba(0,0,0,.56);
+}
