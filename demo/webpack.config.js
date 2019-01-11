@@ -12,7 +12,7 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'bundle.js',
-        publicPath: process.env.NODE_ENV === 'production' ? '/react-reducer-store/' : '/'
+        publicPath: process.env.NODE_ENV === 'production' ? '/react-store/' : '/'
     },
     module: {
         rules: [

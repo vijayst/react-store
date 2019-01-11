@@ -2,7 +2,7 @@
   "name": "react-reducer-store-demo",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://vijayst.github.io/react-reducer-store",
+  "homepage": "https://vijayst.github.io/react-store",
   "license": "MIT",
   "dependencies": {
     "react": "^16.7.0-alpha.2",
