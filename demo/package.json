@@ -5,9 +5,9 @@
   "homepage": "https://vijayst.github.io/react-store",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2",
-    "react-reducer-store": "^2.1.6"
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-reducer-store": "^2.1.8"
   },
   "scripts": {
     "start": "webpack-dev-server",

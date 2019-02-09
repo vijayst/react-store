@@ -1,6 +1,6 @@
 {
   "name": "react-reducer-store",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "repository": "git@github.com:vijayst/react-store.git",
@@ -17,7 +17,7 @@
     "rollup-plugin-node-resolve": "^3.4.0"
   },
   "peerDependencies": {
-    "react": "16.7.0-alpha.2"
+    "react": "^16.8.0"
   },
   "scripts": {
     "build": "rollup --config"
