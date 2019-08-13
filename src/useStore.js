@@ -5,7 +5,13 @@ import shallowEqual from './shallowEqual';
 let oldState;
 
 export default function useStore(mapContextToState, initialState) {
-    const [state, setState] = useState(initialState);
+    let defaultState = initialState;
+
+    if (oldState && !initialState) {
+        defaultState = oldState;
+    }
+
+    const [state, setState] = useState(defaultState);
     oldState = state;
 
     useEffect(() => {
