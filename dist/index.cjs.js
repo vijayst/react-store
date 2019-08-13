@@ -146,7 +146,13 @@ function shallowEqual(objA, objB) {
 
 var oldState;
 function useStore(mapContextToState, initialState) {
-  var _useState = React.useState(initialState),
+  var defaultState = initialState;
+
+  if (oldState && !initialState) {
+    defaultState = oldState;
+  }
+
+  var _useState = React.useState(defaultState),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
       setState = _useState2[1];
